@@ -50,7 +50,7 @@ for(var i = 0; i < questions.length; i++) {
 	quest.textContent = question;
 }
 
-function quizResults() {
+function testResults() {
 	var correct = 0;
 	var incorrect = 0;
 
