@@ -43,7 +43,7 @@ var questions = [
 
 for(var i = 0; i < questions.length; i++) {
 	var question = questions[i].question;
-	var quest = document.getElementById("question" + [i]);
+	var quest = document.getElementById('question' + [i]);
 
 	console.log(question, quest);
 
@@ -56,21 +56,18 @@ function testResults() {
 
 	for(var i = 0; i < questions.length; i++) {
 		var answer = questions[i].answer;
-		var guess = document.getElementById("answer" + [i]);
-		var questionSpot = document.getElementById("question" + [i]);
+		var guess = document.getElementById('answer' + [i].value);
+		var questionSpot = document.getElementById('question' + [i]);
 
 		if(answer == guess) {
-			questionSpot.className = "correct";
-
-			correct++;
-
+			questionSpot.className = 'correct';
+			correct++
 		} else {
-			questionSpot.className = "incorrect";
-
+			questionSpot.className = 'incorrect';
 			incorrect++;
 		};
 	};
 
-	document.getElementById("correct").textContent = correct;
-	document.getElementById("incorrect").textContent = incorrect;
+	document.getElementById('correct').textContent = correct;
+	document.getElementById('incorrect').textContent = incorrect;
 }
