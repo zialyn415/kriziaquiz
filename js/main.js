@@ -41,13 +41,13 @@ var questions = [
 	}
 ];
 
+
 for(var i = 0; i < questions.length; i++) {
 	var question = questions[i].question;
-	var quest = document.getElementById('question' + [i]);
+	var el = document.getElementById('question' + [i]);
+	console.log(question, el);
 
-	console.log(question, quest);
-
-	quest.textContent = question;
+	el.textContent = question;
 }
 
 function testResults() {
@@ -56,12 +56,12 @@ function testResults() {
 
 	for(var i = 0; i < questions.length; i++) {
 		var answer = questions[i].answer;
-		var guess = document.getElementById('answer' + [i].value);
+		var guess = document.getElementById('answer' + [i]).value;
 		var questionSpot = document.getElementById('question' + [i]);
 
 		if(answer == guess) {
 			questionSpot.className = 'correct';
-			correct++
+			correct++;
 		} else {
 			questionSpot.className = 'incorrect';
 			incorrect++;
